@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Tracker Widget</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="widget-container">
+        <div class="input-section">
+            <h2>Daily Input</h2>
+            <div class="input-group">
+                <label for="studyHours">Study Hours:</label>
+                <input type="number" id="studyHours" min="0" max="24" step="0.5">
+            </div>
+            <div class="input-group">
+                <label for="productiveHours">Productive Hours:</label>
+                <input type="number" id="productiveHours" min="0" max="24" step="0.5">
+            </div>
+            <div class="input-group">
+                <label for="entertainmentHours">Entertainment Hours:</label>
+                <input type="number" id="entertainmentHours" min="0" max="24" step="0.5">
+            </div>
+            <button id="saveData">Save Data</button>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-wrapper">
+                <h3>Weekly Overview</h3>
+                <canvas id="weeklyChart"></canvas>
+            </div>
+            <div class="chart-wrapper">
+                <h3>Monthly Trends</h3>
+                <canvas id="monthlyChart"></canvas>
+            </div>
+            <div class="chart-wrapper">
+                <h3>Yearly Progress</h3>
+                <canvas id="yearlyChart"></canvas>
+            </div>
+        </div>
+
+        <div class="productivity-indicator">
+            <h3>Productivity Status</h3>
+            <div id="productivityStatus"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
